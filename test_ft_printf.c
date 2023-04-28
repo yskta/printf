@@ -23,7 +23,7 @@ bool test_int()
 }
 
 void test_int_check() {
-  CU_ASSERT(test_int()==true);
+  CU_ASSERT(test_int()==true)
   return;
 }
 
