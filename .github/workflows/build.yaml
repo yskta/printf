@@ -9,5 +9,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build and Test
       run: |
-        make
+        sudo apt-get update
+        sudo apt-get install -y libcunit1 libcunit1-doc libcunit1-dev
+        cc -lcunit *.c -o libftprintf.a
         ./libftprintf.a
