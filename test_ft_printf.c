@@ -1,13 +1,6 @@
-//#include "/usr/include/CUnit/CUnit.h"
-//#include "/usr/include/CUnit/Automated.h"
-
 //local env & CI env but fail in sonar cloud
 #include "CUnit/CUnit.h"
 #include "CUnit/Automated.h"
-
-//fail compile
-//#include "usr/local/lib/CUnit/CUnit.h"
-//#include "usr/local/lib/CUnit/Automated.h"
 
 
 #include "ft_printf.h"
@@ -34,22 +27,13 @@ void test_int_check() {
   return;
 }
 
-//void test_str()
-//{
-//    char *s = "test success";
-//    ft_printf("%s\n", s);
-//    return ;
-//}
-
 int main(void)
 {
     CU_pSuite testSuite = NULL;
     CU_initialize_registry();
 
     testSuite = CU_add_suite("JojoTestSuite", NULL, NULL);
-    //test関数
     CU_add_test(testSuite, "Test Int", test_int_check);
-    /* CUnit 実行 */
     CU_automated_run_tests();
     CU_list_tests_to_file();
     CU_cleanup_registry();
