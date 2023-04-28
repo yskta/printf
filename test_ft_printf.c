@@ -1,5 +1,9 @@
 #include "/usr/include/CUnit/CUnit.h"
-#include "/usr/include/CUnit/Console.h"
+#include "/usr/include/CUnit/Automated.h"
+
+//#include "CUnit/CUnit.h"
+//#include "CUnit/Automated.h"
+
 #include "ft_printf.h"
 #include <stdbool.h>
 
@@ -41,7 +45,8 @@ int main(void)
     CU_add_test(testSuite, "Test Int", test_int_check);
     //CU_add_test(testSuite, "Test Str", test_str);
     /* CUnit 実行 */
-    CU_console_run_tests();
+    CU_automated_run_tests();
+    CU_list_tests_to_file();
     /* CUnit 終了処理 */
     CU_cleanup_registry();
     return (0);
