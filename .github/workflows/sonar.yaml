@@ -15,13 +15,17 @@ jobs:
       BUILD_WRAPPER_OUT_DIR: build_wrapper_output_directory
     steps:
       - uses: actions/checkout@v2
-      - name: Install CUnit
+      - name: Install build-wrapper
+        run: |
+          wget https://sonarcloud.io/static/cpp/build-wrapper-linux-x86.zip
+          unzip build-wrapper-linux-x86.zip
+          chmod +x build-wrapper-linux-x86/build-wrapper-linux-x86-64
+      - name: Build and Test
         run: |
           sudo apt-get update
           sudo apt-get install -y libcunit1 libcunit1-doc libcunit1-dev
-      - name: Build with Build Wrapper
-        run: |
-          build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} cc -o main -L/usr/include/ -lcunit *.c
+          build-wrapper-linux-x86-64 --out-dir bw-output cc *.c -L/usr/include/ -lcunit
+          sonar-scanner
       - name: Analyze with SonarCloud
         uses: SonarSource/sonarcloud-github-action@master
         env:
