@@ -55,5 +55,5 @@ int main(void)
     CU_list_tests_to_file();
     /* CUnit 終了処理 */
     CU_cleanup_registry();
-    return (0);
+    return 0;
 }
