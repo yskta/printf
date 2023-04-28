@@ -2,11 +2,12 @@
 //#include "/usr/include/CUnit/Automated.h"
 
 //local env & CI env but fail in sonar cloud
-//#include "CUnit/CUnit.h"
-//#include "CUnit/Automated.h"
+#include "CUnit/CUnit.h"
+#include "CUnit/Automated.h"
 
-#include "usr/local/lib/CUnit/CUnit.h"
-#include "usr/local/lib/CUnit/Automated.h"
+//fail compile
+//#include "usr/local/lib/CUnit/CUnit.h"
+//#include "usr/local/lib/CUnit/Automated.h"
 
 
 #include "ft_printf.h"
