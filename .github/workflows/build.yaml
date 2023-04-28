@@ -12,4 +12,4 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y libcunit1 libcunit1-doc libcunit1-dev
         cc *.c -L/usr/usr/include/ -lcunit
-        ./test
+        ./a.out
