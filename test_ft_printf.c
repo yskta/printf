@@ -1,5 +1,5 @@
-#include "CUnit/CUnit.h"
-#include "CUnit/Console.h"
+#include "/usr/include/CUnit/CUnit.h"
+#include "/usr/include/CUnit/Console.h"
 #include "ft_printf.h"
 #include <stdbool.h>
 
