@@ -11,5 +11,5 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y libcunit1 libcunit1-doc libcunit1-dev
-        cc -lcunit *.c -o libftprintf.a
-        ./libftprintf.a
+        cc *.c -o test -L/usr/local/lib -lcunit
+        ./test
