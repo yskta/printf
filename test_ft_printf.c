@@ -49,11 +49,9 @@ int main(void)
     testSuite = CU_add_suite("JojoTestSuite", NULL, NULL);
     //test関数
     CU_add_test(testSuite, "Test Int", test_int_check);
-    //CU_add_test(testSuite, "Test Str", test_str);
     /* CUnit 実行 */
     CU_automated_run_tests();
     CU_list_tests_to_file();
-    /* CUnit 終了処理 */
     CU_cleanup_registry();
     return 0;
 }
