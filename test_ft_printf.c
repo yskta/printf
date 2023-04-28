@@ -1,12 +1,9 @@
 //#include "/usr/include/CUnit/CUnit.h"
 //#include "/usr/include/CUnit/Automated.h"
 
-//#include "CUnit/CUnit.h"
-//#include "CUnit/Automated.h"
-
-
-#include "/usr/local/lib/CUnit/CUnit.h"
-#include "/usr/local/lib/CUnit/Automated.h"
+//local env
+#include "CUnit/CUnit.h"
+#include "CUnit/Automated.h"
 
 
 #include "ft_printf.h"
