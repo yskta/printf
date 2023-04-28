@@ -1,7 +1,7 @@
 //#include "/usr/include/CUnit/CUnit.h"
 //#include "/usr/include/CUnit/Automated.h"
 
-//local env
+//local env & CI env but fail in sonar cloud
 #include "CUnit/CUnit.h"
 #include "CUnit/Automated.h"
 
